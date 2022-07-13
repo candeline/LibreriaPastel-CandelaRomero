@@ -1,0 +1,4 @@
+@mixin botones($colorLetra, $fondo) {
+    color: $colorLetra;
+    background-color: $fondo;
+}
