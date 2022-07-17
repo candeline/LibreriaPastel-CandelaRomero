@@ -71,8 +71,34 @@ header {
   background-color: #f59794; }
 
 .btnEnviar {
-  border-radius: 5px;
-  background-color: #d9b0f1; }
+  border-radius: 5px; }
+
+main .bannerInfo {
+  background-image: url(../assets/img/bannerDcto1.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%; }
+  main .bannerInfo .tituloBanner {
+    color: #444642;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80px; }
+  main .bannerInfo .subBanner {
+    color: #444642;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    padding: 35px; }
+
+.desCarousel {
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.2); }
 
 #fotoNosotros {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
@@ -99,7 +125,7 @@ header {
   background-size: 100% 83%; }
 
 .tituloContacto2 {
-  background-image: linear-gradient(to bottom, transparent 0 65%, #d9b0f1 65% 100%); }
+  background-image: linear-gradient(to bottom, transparent 0 65%, #f59794 65% 100%); }
 
 .emailContacto {
   color: #f59794;
@@ -128,4 +154,4 @@ header {
   transition: all 400ms ease; }
 
 footer {
-  background-color: rgba(201, 201, 200, 0.849); }
+  background-color: rgba(185, 185, 184, 0.849); }

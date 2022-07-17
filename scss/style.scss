@@ -74,7 +74,36 @@ $color-t2: rgb(217, 176, 241);
 .btnEnviar {
     @extend .btn;
     border-radius: 5px;
-    background-color: $color-t2;
+}
+main .bannerInfo{
+background-image: url(../assets/img/bannerDcto1.jpg);
+min-height: 100vh;
+background-position: center;
+background-size: cover;
+justify-content: center;
+display: flex;
+flex-direction: column;
+text-align: center;
+width: 100%;
+.tituloBanner{
+    color: #444642;
+    font-weight: bold;
+    font-family: $main-font;
+    font-size: 80px;
+}
+.subBanner{
+    color: #444642;
+    font-weight: bold;
+    font-family: $main-font;
+    font-size: 40px;
+    font-style: italic;
+    padding: 35px;
+}
+}
+
+.desCarousel{
+    font-family: $main-font;
+    background: rgba(0,0,0,0.2);
 }
 
 #fotoNosotros{
@@ -105,7 +134,7 @@ $color-t2: rgb(217, 176, 241);
 }
 .tituloContacto2{
     @extend .tituloContacto;
-    background-image: linear-gradient(to bottom,transparent 0 65%, $color-t2 65% 100%);
+    background-image: linear-gradient(to bottom,transparent 0 65%, #f59794 65% 100%);
 }
 
 
@@ -137,5 +166,5 @@ $color-t2: rgb(217, 176, 241);
     transition: all 400ms ease; 
 }
 footer{
-    background-color:rgba(201, 201, 200, 0.849); 
+    background-color:rgba(185, 185, 184, 0.849); 
 }
