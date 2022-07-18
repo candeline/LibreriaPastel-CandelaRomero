@@ -154,4 +154,8 @@ main .bannerInfo {
   transition: all 400ms ease; }
 
 footer {
-  background-color: rgba(185, 185, 184, 0.849); }
+  background-color: rgba(185, 185, 184, 0.849);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px; }
+  footer .fa-brands {
+    font-size: 30px; }

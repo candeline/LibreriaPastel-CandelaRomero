@@ -100,7 +100,6 @@ width: 100%;
     padding: 35px;
 }
 }
-
 .desCarousel{
     font-family: $main-font;
     background: rgba(0,0,0,0.2);
@@ -167,4 +166,9 @@ width: 100%;
 }
 footer{
     background-color:rgba(185, 185, 184, 0.849); 
+    font-family: $main-font;
+    font-size: 18px;
+    .fa-brands{
+        font-size: 30px;
+    }
 }
