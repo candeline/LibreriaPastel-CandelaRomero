@@ -6,9 +6,7 @@
     justify-content: space-around;
 }
 .tarjeta{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
+    width: 300px;
     align-items: center;
     border: 1px solid rgb(232, 232, 231);
     margin: 10px;
@@ -22,19 +20,23 @@
     }
     .tarjeta__titulo{
         font-family: $main-font;
+        text-align: center;
         font-weight: bolder;
         font-size: 15px;
         margin: 5px 0px;
     }.tarjeta__desc{
         font-family: $main-font;
+        text-align: center;
     }
     .tarjeta__img{
         width: 100%;
+        height: 200px;
     }
 } 
 .btn{
     padding: map-get($btn, padding);
     margin-top: map-get($btn, margin-top );
+    margin-bottom: map-get($btn , margin-bottom );
     border: map-get($btn, borde);
     @include botones(white, #f59794 )
 }

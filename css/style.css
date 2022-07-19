@@ -18,9 +18,7 @@ header {
   justify-content: space-around; }
 
 .tarjeta {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
+  width: 300px;
   align-items: center;
   border: 1px solid #e8e8e7;
   margin: 10px;
@@ -33,17 +31,21 @@ header {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4); }
   .tarjeta .tarjeta__titulo {
     font-family: "Montserrat", sans-serif;
+    text-align: center;
     font-weight: bolder;
     font-size: 15px;
     margin: 5px 0px; }
   .tarjeta .tarjeta__desc {
-    font-family: "Montserrat", sans-serif; }
+    font-family: "Montserrat", sans-serif;
+    text-align: center; }
   .tarjeta .tarjeta__img {
-    width: 100%; }
+    width: 100%;
+    height: 200px; }
 
 .btn, .btnEnviar {
   padding: 8px 12px;
   margin-top: 5px;
+  margin-bottom: 5px;
   border: 5px;
   color: white;
   background-color: #f59794; }
@@ -201,6 +203,6 @@ main .bannerInfo {
 footer {
   background-color: rgba(185, 185, 184, 0.849);
   font-family: "Montserrat", sans-serif;
-  font-size: 18px; }
+  font-size: 16px; }
   footer .fa-brands {
-    font-size: 30px; }
+    font-size: 25px; }
