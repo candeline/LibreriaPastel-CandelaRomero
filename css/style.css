@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;300&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Montserrat:wght@100;300&family=Open+Sans&display=swap");
 /*Variables*/
 header {
   background-color: #f7adaa; }
@@ -12,27 +11,6 @@ header {
     font-family: "Montserrat", sans-serif;
     color: white;
     padding: 5px; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif; }
-
-.nav-item {
-  color: black;
-  font-family: "Montserrat", sans-serif; }
-  .nav-item:hover {
-    background-image: linear-gradient(to bottom, transparent 0 65%, #ffc0cb 65% 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 83%; }
-
-.titulosPaginas {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.62rem;
-  line-height: 1;
-  letter-spacing: 1.8px;
-  background-image: linear-gradient(to bottom, transparent 0 65%, #f7adaa 65% 100%); }
 
 .tarjetas {
   display: flex;
@@ -73,9 +51,30 @@ header {
 .btnEnviar {
   border-radius: 5px; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
+
+.nav-item {
+  color: black;
+  font-family: "Montserrat", sans-serif; }
+  .nav-item:hover {
+    background-image: linear-gradient(to bottom, transparent 0 65%, #ffc0cb 65% 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 83%; }
+
+.titulosPaginas {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.62rem;
+  line-height: 1;
+  letter-spacing: 1.8px;
+  background-image: linear-gradient(to bottom, transparent 0 65%, #f7adaa 65% 100%); }
+
 main .bannerInfo {
   background-image: url(../assets/img/bannerDcto1.jpg);
-  min-height: 100vh;
+  min-height: 50vh;
   background-position: center;
   background-size: cover;
   justify-content: center;
@@ -84,26 +83,68 @@ main .bannerInfo {
   text-align: center;
   width: 100%; }
   main .bannerInfo .tituloBanner {
+    padding: 10px;
     color: #444642;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
-    font-size: 80px; }
+    font-family: 'Fredoka One';
+    font-size: 60px; }
   main .bannerInfo .subBanner {
     color: #444642;
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
-    padding: 35px; }
+    padding: 15px; }
 
 .desCarousel {
   font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.2); }
 
+.containerC {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+  .containerC .imgCategoria {
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; }
+  .containerC .imgCategoria > img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; }
+  .containerC .imgText {
+    padding: 20px;
+    margin-bottom: 20px;
+    bottom: 0;
+    z-index: 1;
+    transform: translateY(145px);
+    transition: all 0.5 cubic-bezier 0.13, 62, 0.81, 0.91 0s; }
+  .containerC .imgText > h3 {
+    font-family: "Montserrat", sans-serif; }
+
+.imgText, .imgCategoria:after {
+  width: 100%;
+  position: absolute;
+  left: 0; }
+
+.imgCategoria:after {
+  content: '';
+  height: 100%;
+  top: 0;
+  transition: .5s; }
+
+.imgCategoria:hover:after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0.85) 100%);
+  border-radius: 5px; }
+
+.imgCategoria:hover .imgText {
+  transform: translateY(0); }
+
 #fotoNosotros {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   cursor: default;
-  transition: all 400ms ease; }
+  transition: all 400ms ease;
+  margin-top: 20%; }
   #fotoNosotros:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4); }
 
@@ -139,11 +180,13 @@ main .bannerInfo {
 
 #tarjetaForm {
   border: 1px solid #e8e8e7;
-  margin: 10px;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-  transition: all 400ms ease; }
+  transition: all 400ms ease;
+  margin-bottom: 10px; }
+  #tarjetaForm:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4); }
 
 #tarjetaCont {
   border: 1px solid #e8e8e7;
@@ -152,6 +195,8 @@ main .bannerInfo {
   padding: 10px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   transition: all 400ms ease; }
+  #tarjetaCont:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4); }
 
 footer {
   background-color: rgba(185, 185, 184, 0.849);

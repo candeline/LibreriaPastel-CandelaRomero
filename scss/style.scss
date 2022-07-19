@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;300&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Montserrat:wght@100;300&family=Open+Sans&display=swap');
 
 /*Variables*/
 $main-font:'Montserrat', sans-serif;
@@ -7,6 +6,7 @@ $bg-color: #ffc0cb;
 $color-t2: rgb(217, 176, 241);
 
 @import "header";
+@import "tarjetas";
 @import "variables";
 @import "mixin";
 
@@ -33,87 +33,95 @@ $color-t2: rgb(217, 176, 241);
     letter-spacing: 1.8px;
     background-image: linear-gradient(to bottom,transparent 0 65%, #f7adaa 65% 100%);
 }
-.tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.tarjeta{
+
+main .bannerInfo{
+    background-image: url(../assets/img/bannerDcto1.jpg);
+    min-height: 50vh;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    align-items: center;
-    border: 1px solid rgb(232, 232, 231);
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: all 400ms ease;
-    &:hover{
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    }
-    .tarjeta__titulo{
-        font-family: $main-font;
-        font-weight: bolder;
-        font-size: 15px;
-        margin: 5px 0px;
-    }.tarjeta__desc{
-        font-family: $main-font;
-    }
-    .tarjeta__img{
-        width: 100%;
-    }
-} 
-.btn{
-    padding: map-get($btn, padding);
-    margin-top: map-get($btn, margin-top );
-    border: map-get($btn, borde);
-    @include botones(white, #f59794 )
-}
-.btnEnviar {
-    @extend .btn;
-    border-radius: 5px;
-}
-main .bannerInfo{
-background-image: url(../assets/img/bannerDcto1.jpg);
-min-height: 100vh;
-background-position: center;
-background-size: cover;
-justify-content: center;
-display: flex;
-flex-direction: column;
-text-align: center;
-width: 100%;
+    text-align: center;
+    width: 100%;
+
 .tituloBanner{
+    padding: 10px;
     color: #444642;
-    font-weight: bold;
-    font-family: $main-font;
-    font-size: 80px;
+    font-family: 'Fredoka One';
+    font-size: 60px;
 }
 .subBanner{
     color: #444642;
     font-weight: bold;
     font-family: $main-font;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
-    padding: 35px;
+    padding: 15px;
 }
 }
 .desCarousel{
     font-family: $main-font;
     background: rgba(0,0,0,0.2);
 }
+.containerC{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    .imgCategoria{
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .imgCategoria > img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    .imgText{
+        padding: 20px;
+        margin-bottom: 20px;
+        bottom: 0;
+        z-index: 1;
+        transform: translateY(145px);
+        transition: all .5 cubic-bezier (.13,62,.81,.91) 0s;
+        
+    }
+    .imgText > h3{
+        font-family: $main-font;
+    }
+}
 
+.imgText, .imgCategoria:after{
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.imgCategoria:after{
+    content: '';
+    height: 100%;
+    top: 0;
+    transition: .5s;
+}
+
+.imgCategoria:hover:after{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.75) 75%,rgba(0, 0, 0, 0.85)100%) ;
+    border-radius: 5px;
+}
+
+.imgCategoria:hover .imgText{
+    transform: translateY(0) ;
+}
 #fotoNosotros{
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
+    margin-top: 20%;
     &:hover{
         box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     }
 }
-
 .titulofaq{
     font-family: $main-font;
     font-size: 25px;
@@ -135,8 +143,6 @@ width: 100%;
     @extend .tituloContacto;
     background-image: linear-gradient(to bottom,transparent 0 65%, #f59794 65% 100%);
 }
-
-
 .emailContacto{
     color: rgb(245, 151, 148);
     text-decoration: none;
@@ -150,11 +156,14 @@ width: 100%;
 }
 #tarjetaForm{
     border: 1px solid rgb(232, 232, 231);
-    margin: 10px;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 400ms ease; 
+    margin-bottom: 10px;
+    &:hover{
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    }
 }
 #tarjetaCont{
     border: 1px solid rgb(232, 232, 231);
@@ -163,6 +172,9 @@ width: 100%;
     padding: 10px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     transition: all 400ms ease; 
+    &:hover{
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    }
 }
 footer{
     background-color:rgba(185, 185, 184, 0.849); 

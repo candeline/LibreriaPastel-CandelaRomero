@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixin";
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    align-items: center;
+    border: 1px solid rgb(232, 232, 231);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+    &:hover{
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    }
+    .tarjeta__titulo{
+        font-family: $main-font;
+        font-weight: bolder;
+        font-size: 15px;
+        margin: 5px 0px;
+    }.tarjeta__desc{
+        font-family: $main-font;
+    }
+    .tarjeta__img{
+        width: 100%;
+    }
+} 
+.btn{
+    padding: map-get($btn, padding);
+    margin-top: map-get($btn, margin-top );
+    border: map-get($btn, borde);
+    @include botones(white, #f59794 )
+}
+.btnEnviar {
+    @extend .btn;
+    border-radius: 5px;
+}
