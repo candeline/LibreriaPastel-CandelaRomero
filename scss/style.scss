@@ -7,6 +7,7 @@ $color-t2: rgb(217, 176, 241);
 
 @import "header";
 @import "tarjetas";
+@import "tarjetasNovedades";
 @import "variables";
 @import "mixin";
 
@@ -16,6 +17,29 @@ $color-t2: rgb(217, 176, 241);
     padding: 0;
     box-sizing: border-box;
     font-family: $main-font;
+}
+.logo{
+    margin-left: 70px;
+    padding: 8px;
+}
+
+@media (max-width: 767px){
+    .logo{
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .img-logo{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .accordion{
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
 }
 .nav-item{
     color: black;
@@ -129,10 +153,20 @@ main .bannerInfo{
     font-weight: bold;
     line-height: 1;
     letter-spacing: 1.8px;
-    text-align: center;
     background-image: linear-gradient(to bottom,transparent 0 65%, $bg-color 65% 100%);
     background-repeat: no-repeat;
     background-size: 100% 83%;
+}
+.accordion-item{
+    border: 1px solid rgb(232, 232, 231);    
+    &:hover{
+        box-shadow: 5px 5px 20px rgba(131, 130, 130, 0.4);
+
+}
+}
+.accordion-button:not(.collapse){
+    background-color: white;
+    color: black;
 }
 .tituloContacto{
     font-weight: bold;
@@ -181,7 +215,10 @@ footer{
     background-color:rgba(185, 185, 184, 0.849); 
     font-family: $main-font;
     font-size: 16px;
+    padding: 10px;
     .fa-brands{
         font-size: 25px;
+        padding: 5px;
     }
 }
+
