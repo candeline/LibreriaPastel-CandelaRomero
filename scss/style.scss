@@ -22,7 +22,9 @@ $color-t2: rgb(217, 176, 241);
     margin-left: 70px;
     padding: 8px;
 }
-
+html, body{
+    overflow-x: hidden;
+}
 @media (max-width: 767px){
     .logo{
         display: block;
@@ -131,11 +133,11 @@ main .bannerInfo{
 .imgCategoria:hover .imgText{
     transform: translateY(0) ;
 }
-.imgText > a{
-    text-decoration: none;
-    color: white;
+.containerC .imgCategoria .imgText a{
+    text-decoration: none !important;
+    color: white !important;
     &:hover{
-        color: white;
+        color: white !important;
     }
 }
 #fotoNosotros{
