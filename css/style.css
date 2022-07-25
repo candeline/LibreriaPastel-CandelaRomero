@@ -162,10 +162,6 @@ header {
     display: block;
     max-width: 100%;
     margin: 0 auto; }
-  .img-logo {
-    display: block;
-    width: 100%;
-    margin: 0 auto; }
   .accordion {
     display: block;
     max-width: 100%;
@@ -253,6 +249,12 @@ main .bannerInfo {
 
 .imgCategoria:hover .imgText {
   transform: translateY(0); }
+
+.imgText > a {
+  text-decoration: none;
+  color: white; }
+  .imgText > a:hover {
+    color: white; }
 
 #fotoNosotros {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
